@@ -13,7 +13,12 @@
 
         <!-- Dialog -->
         <div v-if="open" class="popup-wrapper" role="dialog">
-            <div class="popup-card" ref="cardRef" tabindex="-1">
+            <div class="loading-animation" v-if="loading">
+                <!-- Add your loading animation here -->
+                <Spinner />
+            </div>
+
+            <div class="popup-card" ref="cardRef" tabindex="-1" v-else>
                 <!-- <button class="popup-close" aria-label="Close" @click="hide">×</button> -->
                 <div class="header-wrapper">
                     <div class="header-title">Estimated carbon savings and diesel savings</div>
@@ -79,6 +84,7 @@ import GraphInput from './GraphInput.vue';
 import Divider from './Divider.vue';
 import KpiMetric from './KpiMetric.vue';
 import SavingsDualBar from './SavingsDualBar.vue';
+import Spinner from './Spinner.vue';
 
 import useAxios from '../composables/useAxios.js';
 
@@ -86,6 +92,7 @@ const props = defineProps({
     lockScroll: { type: Boolean, default: true }
 });
 
+const loading = ref(false);
 const open = ref(true);
 const cardRef = ref(null);
 let lastActive = null;
@@ -96,6 +103,7 @@ const totalData = ref({})
 const estimatedData = ref(null)
 
 const fetchEstimatedSavings = async () => {
+    loading.value = true;
     const { data, error } = await useAxios('/api/estimate/total-savings')
 
     if (error) {
@@ -103,8 +111,8 @@ const fetchEstimatedSavings = async () => {
         return;
     }
 
-    console.log('Estimated savings data-----:', data);
     estimatedData.value = data
+    loading.value = false;
 }
 
 function show() {
