@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: 'Inter', sans-serif;
+}
+
+.text-carbon {
+        color: #0DCFA7 !important;
+}
+
+.text-diesel {
+        color: #4A46FF !important;
+}
+
+.bg-carbon {
+        background-color: #0DCFA7 !important;
+}
+
+.bg-diesel {
+        background-color: #4A46FF !important;
+}
