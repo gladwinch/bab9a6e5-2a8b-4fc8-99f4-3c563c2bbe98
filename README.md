@@ -25,8 +25,8 @@ A minimal full-stack template with a **Node.js + Express + MongoDB** backend and
 
 ```bash
 # 1) Clone
-git clone <your-repo-url>
-cd <your-project>
+git clone https://github.com/gladwinch/bab9a6e5-2a8b-4fc8-99f4-3c563c2bbe98
+cd bab9a6e5-2a8b-4fc8-99f4-3c563c2bbe98
 
 # 2) Install deps
 npm install          # backend deps at root
@@ -34,6 +34,14 @@ cd ui && npm install # frontend deps
 ```
 
 ---
+
+## 🧪 Testing / One-Command Dev Run
+
+From the **project root** only:
+
+```bash
+npm run dev
+```
 
 ## 🚀 Development
 
@@ -53,14 +61,6 @@ npm run dev
 ```
 
 ---
-
-## 🧪 Testing / One-Command Dev Run
-
-From the **project root** only:
-
-```bash
-npm run dev
-```
 
 Then open **http://localhost:5000** for the UI.
 
