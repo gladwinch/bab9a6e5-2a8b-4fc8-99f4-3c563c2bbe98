@@ -68,7 +68,7 @@ Then open **http://localhost:5000** for the UI.
 
 ---
 
-## 🗂️ Suggested Project Structure
+## 🗂️ Project Structure
 
 ```
 .
