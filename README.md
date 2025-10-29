@@ -83,7 +83,6 @@ Then open **http://localhost:5000** for the UI.
 │  └─ src/
 │     ├─ main.js
 │     ├─ App.vue
-│     ├─ api/               # small API client using VITE_API_BASE
 │     └─ components/
 ├─ .env                     # backend env
 ├─ package.json             # root scripts (dev runner)
